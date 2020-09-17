@@ -20,6 +20,7 @@ public interface NoteDao {
 
     @Query("SELECT * FROM Note")
     LiveData<List<Note>> getAllLiveData();
+
     @Query("SELECT * FROM Note WHERE uid IN (:noteIds)")
     List<Note> loadAllByIds(int[] noteIds);
 

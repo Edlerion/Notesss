@@ -7,11 +7,11 @@
 
     <EditText
         android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="410dp"
+        android:layout_height="202dp"
+        android:gravity="top"
         android:hint="Введите текст заметки"
         android:minHeight="200dp"
-        android:gravity="top"
         android:padding="16dp"
         tools:ignore="MissingConstraints" />
 

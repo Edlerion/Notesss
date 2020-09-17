@@ -121,16 +121,6 @@ static class NoteViewHolder extends RecyclerView.ViewHolder {
             }
         });
 
-        completed.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
-                if (!silentUpdate) {
-                    note.done = checked;
-                    App.getInstance().getNoteDao().update(note);
-                }
-                updateStrokeOut();
-            }
-        });
 
     }
 
@@ -141,7 +131,6 @@ static class NoteViewHolder extends RecyclerView.ViewHolder {
         updateStrokeOut();
 
         silentUpdate = true;
-        completed.setChecked(note.done);
         silentUpdate = false;
     }
 
